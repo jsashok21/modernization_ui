@@ -1,14 +1,40 @@
-<div id="chart">
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [dataLabels]="chartOptions.dataLabels"
-      [plotOptions]="chartOptions.plotOptions"
-      [yaxis]="chartOptions.yaxis"
-      [xaxis]="chartOptions.xaxis"
-      [stroke]="chartOptions.stroke"
-      [grid]="chartOptions.grid"
-      [fill]="chartOptions.fill"
-      [annotations]="chartOptions.annotations"
-    ></apx-chart>
-  </div>
+<div class="outerCont">
+    <div class="pageHead"></div>
+    <div class="flex-container">
+        <div class="twoDiv">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <div class="d-flex flex-column flex-grow-1">
+                        <mat-card-title>Account Summary</mat-card-title>
+                        <mat-card-subtitle>Monthly</mat-card-subtitle>
+                        <div class="d-flex flex-column">
+                            <div class="totalAssets">Total Assets</div>
+                            <div class="totalAmount align-self-end">$200,000</div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="totalAssets">Savings</div>
+                            <div class="totalAmount align-self-end">$100,123</div>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="totalAssets">Credit Limit</div>
+                            <div class="totalAmount align-self-end">$8300</div>
+                        </div>
+                    </div>
+                </mat-card-header>
+                <mat-card-actions>
+                    <button mat-button>Learn More</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="twoDiv"><app-barchart></app-barchart></div>
+    </div>
+    <mat-divider class="marginAround"></mat-divider>
+    <!--<div class="donutWRap">
+        <div class="d-flex">
+            <app-donut></app-donut>
+            <div class="col"></div>
+        </div>
+
+    </div>-->
+    <app-summary></app-summary>
+</div>

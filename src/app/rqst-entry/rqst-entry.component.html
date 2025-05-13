@@ -1,0 +1,32 @@
+<div class="outerCont">
+    <div class="pageHead">Choose your request type</div>
+    <mat-selection-list #requests [formControl]="requestTypesCtrl" [multiple]="true">
+        @for (request of requestTypes; track request) {
+        <mat-list-option [value]="request.value">{{request.name}}</mat-list-option>
+        }
+    </mat-selection-list>
+
+    @for(item of selectedRqs; track item){
+    @switch (item) {
+    @case ('CLI') {
+    <app-cli></app-cli>
+    }
+    @case ('RRV') {
+    <app-rrv></app-rrv>
+    }
+    @case ('PIN') {
+    <app-pin></app-pin>
+    }
+    @case ('ADC') {
+    <app-adc></app-adc>
+    }
+    @case ('CLC') {
+    <app-clc></app-clc>
+    }
+    @default {
+    Default case.
+    }
+    }
+    }
+    <button *ngIf="selectedRqs.length" mat-flat-button (click)="openSnackBar()" class="float-end">Submit request</button>
+</div>

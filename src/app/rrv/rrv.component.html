@@ -1,0 +1,17 @@
+<div class="outerContForm">
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)" [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title> Risk Review </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="pageHead"></div>
+        <form [formGroup]="rrvForm" class="formWrapper">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <div class="d-flex addrssSec">
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Account Number</mat-label>
+                    <input matInput placeholder="Account Number" formControlName="accountNum" required>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-expansion-panel>
+</div>

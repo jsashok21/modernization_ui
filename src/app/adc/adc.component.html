@@ -1,0 +1,51 @@
+<div class="outerContForm">
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)" [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>Additional Card</mat-panel-title>
+        </mat-expansion-panel-header>
+        <form [formGroup]="adcForm" class="formWrapper">
+            <div class="d-flex flex-column addrssSec">
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Account Number</mat-label>
+                    <input matInput placeholder="Account Number" formControlName="accountNum" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Credit Limit</mat-label>
+                    <input matInput placeholder="Credit Limit" formControlName="creditLimit" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>No of cards</mat-label>
+                    <input matInput placeholder="No of cards" formControlName="cardsNo" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Cash limit</mat-label>
+                    <input matInput placeholder="City" formControlName="cashLimit" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Address Line 1</mat-label>
+                    <input matInput placeholder="Address Line 1" formControlName="addrLn1" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Address Line 2</mat-label>
+                    <input matInput placeholder="Address Line 2" formControlName="addrLn2" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Postal Code</mat-label>
+                    <input matInput placeholder="Postal Code" formControlName="addrZip" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>City</mat-label>
+                    <input matInput placeholder="City" formControlName="addrCity" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>State</mat-label>
+                    <input matInput placeholder="Postal Code" formControlName="addrState" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Country</mat-label>
+                    <input matInput placeholder="City" formControlName="addrCnty" required>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-expansion-panel>
+</div>

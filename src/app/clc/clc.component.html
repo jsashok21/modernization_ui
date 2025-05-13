@@ -1,0 +1,23 @@
+<div class="outerContForm">
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)" [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title> Cash Line Change </mat-panel-title>
+        </mat-expansion-panel-header>
+        <form [formGroup]="clcReqForm" class="formWrapper">
+            <div class="d-flex addrssSec justify-content-between">
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Account Number</mat-label>
+                    <input matInput placeholder="Address Line 1" formControlName="accountNum" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>New cash line</mat-label>
+                    <input matInput placeholder="Address Line 2" formControlName="clcLimit" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Current cash line</mat-label>
+                    <input matInput placeholder="Postal Code" formControlName="newCreditLimit" required>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-expansion-panel>
+</div>

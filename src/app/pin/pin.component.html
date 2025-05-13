@@ -1,0 +1,23 @@
+<div class="outerContForm">
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)" [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title> PIN Change request </mat-panel-title>
+        </mat-expansion-panel-header>
+        <form [formGroup]="pinForm" class="formWrapper">
+            <div class="d-flex justify-content-between">
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Account Number</mat-label>
+                    <input matInput placeholder="Account Number" formControlName="accountNum" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>Old PIN</mat-label>
+                    <input matInput placeholder="Old PIN" formControlName="oldPin" required>
+                </mat-form-field>
+                <mat-form-field appearance="outline" floatLabel="auto">
+                    <mat-label>New PIN</mat-label>
+                    <input matInput placeholder="New PIN" formControlName="newPin" required>
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-expansion-panel>
+</div>

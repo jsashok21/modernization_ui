@@ -1,0 +1,34 @@
+.totalAssets {
+    font-size: 14px;
+    padding: 10px 0 0;
+}
+.totalAmount {
+    font-size: 25px;
+    padding: 10px 0 0;
+    color: #e31837;
+}
+.twoDiv {
+    width: 45%;
+}
+.marginAround {
+    margin: 40px 0 50px;
+}
+.donutWRap {
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+@media only screen and (max-width: 600px) {
+    .flex-container {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+    }
+    .twoDiv {
+        width: 100%;
+    }
+}

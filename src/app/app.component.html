@@ -1,44 +1,10 @@
-
-
-<div class="example-input-wrapper">
-  <label for="duration">Animation duration:</label>
-  <input id="duration" value="2000" type="number" min="0" step="100" #duration>
+<div class="spinnerBlock" [ngClass]="{'d-none':!isSpinnerOn, 'd-block': isSpinnerOn}">
+    <mat-progress-spinner class="modernSpinner" mode="indeterminate">
+    </mat-progress-spinner>
+    <p class="spinnyMsg">We've got you! Please hold on as we process your request.<br> This shouldn't take long.</p>
 </div>
 
-<a routerLink="dashboard">Dashboard</a>
-
+<div class="d-none d-xl-block">
+    <app-navigation></app-navigation>
+</div>
 <router-outlet></router-outlet>
-
-<mat-vertical-stepper [linear]="false" #stepper [animationDuration]="duration.value">
-  <mat-step [stepControl]="firstFormGroup">
-    <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your address</ng-template>
-      <mat-form-field>
-        <input matInput placeholder="Address" formControlName="secondCtrl" required>
-      </mat-form-field>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-vertical-stepper>

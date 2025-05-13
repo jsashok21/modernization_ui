@@ -1,0 +1,9 @@
+::ng-deep {
+    .mat-mdc-form-field.ng-touched .mdc-notched-outline {
+        background-color: #C7F6C7;
+    }
+    .mat-mdc-form-field-input-control {
+        z-index: 2;
+        position: relative;
+    }
+}

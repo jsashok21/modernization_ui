@@ -1,0 +1,13 @@
+<div class="outerCont">
+    <div class="successBloc">
+        <p>Congratulations. Your Credit Limit is auto-approved!</p>
+        <p>@for (item of selectedRqs; track $index) {
+            <span>{{item}}, </span>
+            } submitted succesfully</p>
+        <p>Your request number is <span class="fw-bold">412356789</span></p>
+        <div class="d-flex buttonBlock">
+            <button mat-flat-button routerLink="/dashboard" class="me-3">Go to home</button>
+            <button mat-flat-button routerLink="/createReq">Create another request</button>
+        </div>
+    </div>
+</div>
